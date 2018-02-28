@@ -24,7 +24,7 @@ request.bind_on_process_request_complete(response_received)
 request.process_request()
 ```
 
-If you prefer the polling apparoach, you need to check for the get_status() return value (an int). In the C++ it is defined as:
+If you prefer the polling approach, you need to check for the get_status() return value (an int). In the C++ it is defined as:
 
 ```c++
 namespace EHttpRequestStatus
