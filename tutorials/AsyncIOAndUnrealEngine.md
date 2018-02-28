@@ -219,7 +219,7 @@ async def wait_for_redis():
 asyncio.ensure_future(wait_for_redis())
 ```
 
-## Managinx exceptions in non-awaited coroutines
+## Managing exceptions in non-awaited coroutines
 
 By default exceptions thrown in a non-awaited coroutine (like the ones you spawn with asyncio.ensure_future) are not propagated.
 
