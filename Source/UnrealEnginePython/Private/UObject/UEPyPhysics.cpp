@@ -375,7 +375,6 @@ PyObject *py_ue_set_physics_angular_velocity(ue_PyUObject * self, PyObject * arg
 	return Py_None;
 }
 
-
 PyObject *py_ue_get_physics_angular_velocity(ue_PyUObject * self, PyObject * args)
 {
 
@@ -458,11 +457,11 @@ PyObject *py_ue_destructible_apply_damage(ue_PyUObject * self, PyObject * args)
 #if ENGINE_MINOR_VERSION < 18
 				destructible = (UDestructibleComponent *)actor->GetComponentByClass(UDestructibleComponent::StaticClass());
 #else
-				for (UActorComponent *component : actor->GetComponents())
+				for (UActorComponent *checked_component : actor->GetComponents())
 				{
-					if (Cast<IDestructibleInterface>(component))
+					if (Cast<IDestructibleInterface>(checked_component))
 					{
-						destructible = (IDestructibleInterface *)component;
+						destructible = (IDestructibleInterface *)checked_component;
 						break;
 					}
 				}
