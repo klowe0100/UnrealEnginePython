@@ -23,7 +23,7 @@ public class UnrealEnginePython : ModuleRules
         "C:/Python27",
         "C:/IntelPython35",
 	// use User environment variable?
-	"C:/Users/gohan/AppData/Local/Programs/Python/PYthon36"
+	// "C:/Users/gohan/AppData/Local/Programs/Python/PYthon36"
     };
 
     private string[] macKnownPaths =
